@@ -1,0 +1,100 @@
+﻿@model Student_Record.Models.Students
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2>Create Student</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="StudentName" class="form-label"></label>
+                            <input asp-for="StudentName" class="form-control" />
+                            <span asp-validation-for="StudentName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="FatherName" class="form-label"></label>
+                            <input asp-for="FatherName" class="form-control" />
+                            <span asp-validation-for="FatherName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="FatherContact" class="form-label"></label>
+                            <input asp-for="FatherContact" class="form-control" />
+                            <span asp-validation-for="FatherContact" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MotherName" class="form-label"></label>
+                            <input asp-for="MotherName" class="form-control" />
+                            <span asp-validation-for="MotherName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MotherContact" class="form-label"></label>
+                            <input asp-for="MotherContact" class="form-control" />
+                            <span asp-validation-for="MotherContact" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="DateOfBirth" class="form-label"></label>
+                            <input asp-for="DateOfBirth" class="form-control" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Gender" class="form-label"></label>
+                            <select asp-for="Gender" class="form-control form-select">
+                                <option value="">Select...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ProgrammeEnrolled" class="form-label"></label>
+                            <select asp-for="ProgrammeEnrolled" class="form-control form-select">
+                                <option value="">Select a programme...</option>
+                                <option value="General Arts 2A">General Arts 2A</option>
+                                <option value="Home Economics 2A">Home Economics 2A</option>
+                                <option value="Visual Arts">Visual Arts</option>
+                                <option value="General Arts 2C">General Arts 2C</option>
+                                <option value="Agriculture Science">Agriculture Science</option>
+                                <option value="Technical Skills 1">Technical Skills 1</option>
+                                <option value="General Arts 2B">General Arts 2B</option>
+                                <option value="Pure Science">Pure Science</option>
+                                <option value="Technical Skills 2">Technical Skills 2</option>
+                                <option value="Home Economics 2B">Home Economics 2B</option>
+                                <option value="Business">Business</option>
+                            </select>
+                            <span asp-validation-for="ProgrammeEnrolled" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <input type="submit" value="Create" class="btn btn-primary btn-block" />
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-end">
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
