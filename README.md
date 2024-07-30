@@ -2,7 +2,7 @@
 # Student Record Management System
 This project is an ASP.NET Core MVC web application for managing student records. It includes features for creating, viewing, editing, deleting, and filtering student records. Additionally, it supports importing and exporting student data in Excel format and provides pagination for easy navigation through records.
 
-# Features
+## Features
 Create, read, update, and delete student records
 Import student data from Excel files
 Export student data to Excel files
@@ -51,7 +51,7 @@ Click "Upload" to import the data.
 Click on the "Download Excel" button on the homepage to export all student records to an Excel file.
 
 # License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 # Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
